@@ -1,0 +1,19 @@
+#container {
+    background-image: linear-gradient(rgba(49, 49, 49, 0.733), rgba(37, 37, 37, 0.644)),
+    url("./background-disney.jpg");
+    width: 100vw;
+    height: 100vh;
+    }
+
+
+#countdown {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(235, 235, 235, 0.329);
+    padding: 15px;
+    width: 60%;
+    border-radius: 25px;
+    font-size: 60px;
+    text-align: center;
+}
+    
