@@ -1,19 +1,51 @@
 #container {
-    background-image: linear-gradient(rgba(49, 49, 49, 0.733), rgba(37, 37, 37, 0.644)),
-    url("./background-disney.jpg");
     width: 100vw;
     height: 100vh;
+    background-image: linear-gradient(rgba(49, 49, 49, 0.733), rgba(37, 37, 37, 0.644)),
+    url("./background-disney.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex; /* contexte sur le parent */
     }
 
 
 #countdown {
-    margin-left: auto;
+    /* margin-left: auto;
     margin-right: auto;
+    margin-top: 50vh; */
+    margin: auto; /* eh oui, tout bêtement */
     background-color: rgba(235, 235, 235, 0.329);
-    padding: 15px;
+    padding: 20px;
     width: 60%;
     border-radius: 25px;
-    font-size: 60px;
+    font-size: 3em;
     text-align: center;
+
 }
-    
+
+
+
+@media only screen and (max-width : 520px) {
+
+    #container {
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(rgba(49, 49, 49, 0.733), rgba(37, 37, 37, 0.644)),
+        url("./background-disney.jpg");
+        background-repeat: no-repeat;
+        background-size:auto;
+        display: flex; /* contexte sur le parent */
+        }
+
+    #countdown {
+        margin-left: auto;
+        margin-right: auto;
+        
+        background-color: rgba(235, 235, 235, 0.329);
+        padding: 15px;
+        width: 60%;
+        border-radius: 25px;
+        font-size: 2em;
+        text-align: center;
+    }
+    }
