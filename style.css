@@ -1,0 +1,36 @@
+body {
+  background-image: url(images/disney.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color:#464646;
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+#countdown {
+  margin: auto; 
+  background-color: rgba(235, 235, 235, 0.329);
+  padding: 20px;
+  width: 60%;
+  border-radius: 25px;
+  font-size: 3em;
+  text-align: center;
+  color: rgba(3, 3, 3, 0.773);
+
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url(images/disney-mobile.jpg);
+  }
+	}

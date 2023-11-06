@@ -1,48 +1,50 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
-    <link rel="stylesheet" href="./assets/styles.css">
-    <title>Countdwn to Disney</title>
+<meta charset="utf-8">
+<title>Countdown to Disney</title>
+<link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
-    <div id="container">
-    <script>
-        var end = new Date('12/05/2023 09:00 AM');
-        
-            var _second = 1000;
-            var _minute = _second * 60;
-            var _hour = _minute * 60;
-            var _day = _hour * 24;
-            var timer;
-        
-            function showRemaining() {
-                var now = new Date();
-                var distance = end - now;
-                if (distance < 0) {
-        
-                    clearInterval(timer);
-                    document.getElementById('countdown').innerHTML = 'EXPIRED!';
-        
-                    return;
-                }
-                var days = Math.floor(distance / _day);
-                var hours = Math.floor((distance % _day) / _hour);
-                var minutes = Math.floor((distance % _hour) / _minute);
-                var seconds = Math.floor((distance % _minute) / _second);
-        
-                document.getElementById('countdown').innerHTML = days + 'jour(s) ';
-                document.getElementById('countdown').innerHTML += hours + 'heures ';
-                document.getElementById('countdown').innerHTML += minutes + 'minutes ';
-                document.getElementById('countdown').innerHTML += seconds + 'secondes';
+  <script>
+    var end = new Date('12/05/2023 09:00 AM');
+    
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+    
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+    
+                clearInterval(timer);
+                document.getElementById('countdown').innerHTML = 'EXPIRED!';
+    
+                return;
             }
-        
-            timer = setInterval(showRemaining, 1000);
-        </script>
-        <div id="countdown"></div>
-    </div>
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+    
+            document.getElementById('countdown').innerHTML = days + 'jour(s) ';
+            document.getElementById('countdown').innerHTML += hours + 'heures ';
+            document.getElementById('countdown').innerHTML += minutes + 'minutes ';
+            document.getElementById('countdown').innerHTML += seconds + 'secondes';
+        }
+    
+        timer = setInterval(showRemaining, 1000);
+    </script>
+
+  <header class="container">
+    <section class="content">
+      <div id="countdown"></div>      
+    </section>
+  </header>
 </body>
 </html>
